@@ -1,0 +1,4 @@
+segment,frames,evaluation_split,mota_percent,idf1_percent,identity_switches,precision_percent,recall_percent,false_positives,false_negatives,source
+Segment_A,300,development,77.6,72.3,58,91.9,86.0,497,925,Colab notebook cell 60 rounded display
+Segment_B,300,development,68.3,68.6,106,87.8,81.2,744,1244,Colab notebook cell 60 rounded display
+Segment_C,300,development,81.4,74.7,48,91.4,90.7,566,613,Colab notebook cell 60 rounded display
