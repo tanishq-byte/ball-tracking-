@@ -1,3 +1,21 @@
+# Football CV — player and ball tracking
+
+## Latest progress: 29 October 2026
+
+The complete dated backup is in [`progress/2026-10-29`](progress/2026-10-29/README.md), including the ball-tracking notebook, player checkpoint, tracking outputs, 40 benchmark frames and annotations, evaluation CSVs, and motion-tracklet experiments. The original ZIP contents are preserved; `snapshot_integrity.json` records their SHA-256 hashes.
+
+- **Player tracking:** fine-tuned YOLO26n V1 checkpoint and ByteTrack configuration, predictions for segments A/B/C, and development metrics.
+- **Ball benchmark:** 40 annotated frames, including 36 valid visible-ball annotations and 4 uncertain/excluded frames.
+- **Initial tracking evaluation:** predictions on 11 of 36 valid frames (**30.56% position coverage**); mean center error **2.16 pixels on those 11 predictions**. This is not 97% accuracy and does not measure performance on the 25 missing frames.
+- **Diagnostic experiments:** local oracle detection and V8 association use ground truth as guidance. Their recovery results are diagnostic and must not be presented as autonomous test accuracy.
+- **V9:** automatic motion-tracklet discovery does not use ground truth for association; subsequent GT comparisons are evaluation. It remains an experiment rather than a validated full-match tracker.
+
+The notebook prompts for the Roboflow API key using `getpass`; supply your own key when executing. It retains Colab/Google Drive paths, so local execution requires adapting those paths. This is an archived progress snapshot, not a standalone installed application. Full source videos and training datasets are not included. The backup includes extracted benchmark images, annotations and model weights.
+
+These experiments use development footage; independent match-level generalization remains unverified. The original Phase 1 documentation below is preserved as historical context. Its statement that weights are not included refers to the original delivery; today's snapshot now includes the player checkpoint.
+
+---
+
 # Football player tracking (Phase 1)
 
 A reproducible starting point for detecting and tracking football players in broadcast video. The Colab workflow samples SoccerTrack v2 match footage, fine-tunes a YOLO26n detector, explores a pitch region of interest (ROI), and compares multi-object tracking configurations. The selected tracking configuration is Ultralytics ByteTrack.

@@ -1,0 +1,12 @@
+Metric,Value
+Total benchmark frames,40.0
+Valid ground truth,36.0
+Uncertain or excluded,4.0
+Frames with predictions,11.0
+Position coverage (%),30.555555555555557
+Mean center error (px),2.1603359517908443
+Median center error (px),2.113476993014192
+RMSE (px),2.272555527932995
+Within 10 px (%),30.555555555555557
+Within 20 px (%),30.555555555555557
+Within 30 px (%),30.555555555555557

@@ -1,0 +1,25 @@
+{
+  "detector": "YOLO26n fine-tuned V1",
+  "training_match": "117092",
+  "development_validation_match": "117093",
+  "tracker": "ByteTrack",
+  "imgsz": 1536,
+  "confidence": 0.35,
+  "new_track_thresh": 0.45,
+  "match_thresh": 0.8,
+  "roi": "manual pitch ROI V2",
+  "evaluation_segments": [
+    [
+      0,
+      300
+    ],
+    [
+      2000,
+      2300
+    ],
+    [
+      4000,
+      4300
+    ]
+  ]
+}
